@@ -24,6 +24,7 @@ int pos = 0;
 int value1=0;
 int value2=0;
 void setup() {
+  Serial.begin(9600);
   myservo1.attach(6);
   myservo2.attach(10);
   pinMode(pump, OUTPUT);
@@ -32,17 +33,19 @@ void setup() {
   pinMode(echoPin1, INPUT);
   pinMode(initPin2, OUTPUT);
   pinMode(echoPin2, INPUT);
+  digitalWrite(pump, HIGH);
   myservo1.write(0);
   myservo2.write(0);
+  delay(1000);
 }
 
 void loop() {
   value1=analogRead(ldr1);
-  value2=analogRead(ldr2);
-  digitalWrite(pump, HIGH); 
+  value2=analogRead(ldr2); 
   distance1 = getDistance(initPin1, echoPin1);
   distance2 = getDistance(initPin2, echoPin2);
-  if (distance1 <= 40){
+  Serial.println(value1);
+  if (distance1 > 7){
     son1();
   }
   if(value1<100)

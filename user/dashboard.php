@@ -44,7 +44,7 @@ if(isset($_POST['update'])){
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Soft UI Dashboard by Creative Tim
+    Animal feeding system
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -77,7 +77,7 @@ if(isset($_POST['update'])){
                 <!-- Styles -->
                 <style>
                 #chartdiv {
-                  width: 68%;
+                  width: 50%;
                   height: 700px;
                 }
 
@@ -89,7 +89,7 @@ if(isset($_POST['update'])){
                 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 
                 <?php
-                $level = "80";
+                $level = "0";
                 $names = " ";
                 ?>
                 <!-- Chart code -->
@@ -103,7 +103,7 @@ if(isset($_POST['update'])){
                 // Create chart instance
                 var chart = am4core.create("chartdiv", am4charts.XYChart3D);
 
-                chart.titles.create().text = "Food tank";
+                chart.titles.create().text = "Food container";
 
                 // Add data
 
