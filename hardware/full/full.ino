@@ -44,15 +44,15 @@ void loop() {
   value2=analogRead(ldr2); 
   distance1 = getDistance(initPin1, echoPin1);
   distance2 = getDistance(initPin2, echoPin2);
-  Serial.println(value1);
+  Serial.println(distance2);
   if (distance1 > 7){
     son1();
   }
-  if(value1<100)
+  if(value1>20)
   {
     opense1();
   }
-  if(value2<100)
+  if(value2>20)
   {
     opense2();
   }
@@ -77,23 +77,23 @@ void son2(){
   //Kohereza data kuri website
   }
 void opense1(){
-  for (pos = 0; pos <= 180; pos += 1) {
+  for (pos = 180; pos >= 0; pos -= 1) {
     myservo1.write(pos);
     delay(15);
   }
   delay(200);
-  for (pos = 180; pos >= 0; pos -= 1) {
+  for (pos = 0; pos <= 180; pos += 1) {
     myservo1.write(pos);
     delay(15);
   }
 }
 void opense2(){
-  for (pos = 0; pos <= 180; pos += 1) {
+  for (pos = 180; pos >= 0; pos -= 1) {
     myservo2.write(pos);
     delay(15);
   }
   delay(200);
-  for (pos = 180; pos >= 0; pos -= 1) {
+  for (pos = 0; pos <= 180; pos += 1) {
     myservo2.write(pos);
     delay(15);
   }

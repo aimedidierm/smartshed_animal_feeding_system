@@ -77,10 +77,9 @@ if(isset($_POST['update'])){
                 <!-- Styles -->
                 <style>
                 #chartdiv {
-                  width: 50%;
+                  width: 80%;
                   height: 700px;
                 }
-
                 </style>
 
                 <!-- Resources -->
@@ -89,8 +88,11 @@ if(isset($_POST['update'])){
                 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 
                 <?php
-                $level = "0";
-                $names = " ";
+                // getting chart data
+                $level1 = "80";
+                $names1 = " Food container";
+                $level2 = "20";
+                $names2 = " Water container";
                 ?>
                 <!-- Chart code -->
                 <script>
@@ -103,22 +105,26 @@ if(isset($_POST['update'])){
                 // Create chart instance
                 var chart = am4core.create("chartdiv", am4charts.XYChart3D);
 
-                chart.titles.create().text = "Food container";
+                chart.titles.create().text = "Animal feeding tank monitoring";
 
                 // Add data
 
                 chart.data = [{
-                  "category": '<?php echo $names ?>',
-                  "value1": '<?php echo $level ?>',
-                  "value2": '<?php echo 100 - $level ?>'
-                }];
+                  "category": '<?php echo $names1 ?>',
+                  "value1": '<?php echo $level1 ?>',
+                  "value2": '<?php echo 100 - $level1 ?>'
+                }, {
+                  "category": '<?php echo $names2 ?>',
+                  "value1": '<?php echo $level2 ?>',
+                  "value2": '<?php echo 100 - $level2 ?>'
+              }];
 
                 // Create axes
                 var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
                 categoryAxis.dataFields.category = "category";
                 categoryAxis.renderer.grid.template.location = 0;
                 categoryAxis.renderer.grid.template.strokeOpacity = 0;
-
+                
                 var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
                 valueAxis.renderer.grid.template.strokeOpacity = 0;
                 valueAxis.min = -10;
