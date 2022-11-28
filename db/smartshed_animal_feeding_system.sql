@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 01, 2022 at 05:24 PM
+-- Generation Time: Nov 28, 2022 at 08:58 AM
 -- Server version: 8.0.29-0ubuntu0.20.04.3
 -- PHP Version: 7.4.3
 
@@ -43,7 +43,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `email`, `names`, `phone`, `address`, `password`, `time`) VALUES
-(1, 'admin@gmail.com', 'Aime DIdier ', '0788750979', 'Huye, Rwanda', 'd41d8cd98f00b204e9800998ecf8427e', '2022-06-17 13:58:07');
+(1, 'admin@gmail.com', 'UWIMBABAZI Leatitia', '0788750979', 'Huye, Rwanda', '3b081fd5426c134088a9b1466ff4c224', '2022-06-17 13:58:07');
 
 -- --------------------------------------------------------
 
@@ -66,7 +66,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `names`, `phone`, `address`, `password`, `time`) VALUES
-(1, 'user@gmail.com', 'Aime DIdier ', '0788750979', 'Huye, Rwanda', 'd41d8cd98f00b204e9800998ecf8427e', '2022-06-17 13:58:07');
+(1, 'user@gmail.com', 'Mukamana Alita', '0788750979', 'Huye, Rwanda', '3b081fd5426c134088a9b1466ff4c224', '2022-06-17 13:58:07');
 
 --
 -- Indexes for dumped tables
@@ -100,7 +100,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

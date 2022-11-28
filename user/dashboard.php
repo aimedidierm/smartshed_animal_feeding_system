@@ -93,7 +93,7 @@ if(isset($_POST['update'])){
                 $level1 = "80";
                 $names1 = " Food container";
                 $level2 = "20";
-                $names2 = " Water container";
+                $names2 = " Water tank";
                 ?>
                 <!-- Chart code -->
                 <script>
