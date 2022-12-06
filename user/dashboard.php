@@ -90,7 +90,7 @@ if(isset($_POST['update'])){
 
                 <?php
                 // getting chart data
-                $query = "SELECT * FROM level ORDER BY id DESC limit 1";
+                $query = "SELECT * FROM lever ORDER BY id DESC limit 1";
                 $stmt = $db->prepare($query);
                 $stmt->execute();
                 $rows = $stmt->fetch(PDO::FETCH_ASSOC);
