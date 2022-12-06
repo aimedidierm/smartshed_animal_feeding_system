@@ -44,7 +44,7 @@ void loop() {
   value2=analogRead(ldr2); 
   distance1 = getDistance(initPin1, echoPin1);
   distance2 = getDistance(initPin2, echoPin2);
-  Serial.println(distance2);
+  Serial.println((String)"distance1="+distance1+"&distance2="+distance2);
   if (distance1 > 7){
     son1();
   }

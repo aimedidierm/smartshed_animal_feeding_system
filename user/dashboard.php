@@ -90,10 +90,16 @@ if(isset($_POST['update'])){
 
                 <?php
                 // getting chart data
-                $level1 = "80";
+                $query = "SELECT * FROM level ORDER BY id DESC limit 1";
+                $stmt = $db->prepare($query);
+                $stmt->execute();
+                $rows = $stmt->fetch(PDO::FETCH_ASSOC);
+                if ($stmt->rowCount()>0) {
+                $level1 = $rows['tank1'];
                 $names1 = " Food container";
-                $level2 = "20";
+                $level2 = $rows['tank2'];
                 $names2 = " Water tank";
+              }
                 ?>
                 <!-- Chart code -->
                 <script>
