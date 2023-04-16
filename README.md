@@ -5,7 +5,7 @@ Electronic project wich helps to feed two pet and monitor quantity on web applic
 # Setup
 To set up this project is easy, Just clone it from github.
 ## Import database 
-import the sql file which is located under `/db/spt.sql`
+import the sql file which is located under `/db/smartshed_animal_feeding_system.sql`
 
 # Contributing
 Contributions are welcome!
